@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: khaki;
+    margin: 0 1%;
+}
+
+header {
+    /*
+        header 를 fixed 로 설정하고 옵셋을 지정함으로써 부모가 인접한 body 가
+        아닌 뷰포트가 됨에 주의.
+        또한 body 내에 header 를 맞추기 위해서 body 의 좌우 마진을 감안하여
+        너비 지정.
+    */
+    position: sticky ;
+    top: 0 ;
+    /* border:10px solid red; */
+
+    /* 
+        header 가 블럭요소이지만 fixed 설정으로 컨텐트 영역 크기로 설정되어
+        최초 로드시 contents 가 none 인 상테에서는 메뉴들의 컨텐트 영역 크기
+        만큼만 줄어서 표현되는 문제점이 발생되므로 반드시 너비 지정 필요.
+    */
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;    
+    /* 개행 하기 위하여 wrap을 줘서 밑으로 개행시킴. */
+
+    /* 
+        main 스크롤 시 header 의 menu 와 contents 부분을 제외한 좌우 부분에
+        main 이 나타나지 않도록 하기 위해 body 와 동일한 백그라운드 색상 지정.
+    */
+    background-color: khaki;
+    /* 지울시 화면 전체에 글자가 나옴. body색과 같은 색상을 함으로 인해
+        짤리는 효과 나타남.  */
+
+    /* 
+        header 와 main 이 항상 일정한 간격을 유지하기 위한 하단 패딩 설정.
+        header 가 fixed 로 설정되어 마진은 적용되지 않음에 유의.
+    */
+    padding-bottom: .625em;
+    /* contents박스와 main박스 */
+}
+
+main {
+    background-color: rgb(242, 173, 150);
+    
+    /* 글자 잘리는 것 방지하기 위해 임의로 11em을 설정함. */
+    padding: .625em;
+    /* main박스 내 왼쪽, 글자 떨어지는 정도  */
+}
+
+header .menu,
+header .contents {
+    width: 60%;
+}
+
+/* ============================================================================= */
+
+header .menu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .3125em;
+}
+
+header .menu>li {
+    width: 33%;
+    /* transition: 1s; */
+    /* 가운데 정렬이 menu에서 space-between으로 지정되어있어서
+        gap을 안주고 33%로 줌으로 인해 1%가 남아 갭 발생한것처럼 보임. */
+}
+
+header .menu a {
+    background-color: darkseagreen;
+    color: aliceblue;
+    letter-spacing: .4em;
+    padding-left: .4em;
+    line-height: 2.5em;
+    transition: .5s;
+    display: flex;
+    /* flex미설정 시 박스가 아니게 되므로 a태그에 설정된 높이 등이 적용안됨.
+        그래서 menu,store등이 박스형태가 아니고 인라인 형식처럼 보이게 된다. */
+    justify-content: center;
+    /* menu, store 박스내 글자 가운데 정렬. */
+    overflow: hidden;
+}
+
+/* ============================================================================= */
+
+header .contents div {
+    background-color: rgb(202, 232, 244);
+    padding: 10px;
+    /* contents 박스와 글자 간격 설정. */
+    display: none;
+}
+
+/* header .contents div:target {
+    display: block;
+} */
+
+header .menu .selected {
+    background-color: black;
+
+}
