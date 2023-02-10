@@ -1,0 +1,101 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    overflow: hidden;
+}
+
+.page_container {
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.pageFrame {
+    transition: all 2s;
+    width:100vw;
+    height:100%;
+    display: inline-block;
+    flex-direction: column;
+
+}
+
+.page {
+   
+    height:100vh;
+   
+}
+
+.page1 {
+    background-color: purple;
+}
+
+.page2 {
+    background-color: aqua;
+}
+
+.page3 {
+    background-color: gold;
+}
+
+.page4 {
+    background-color: cornflowerblue;
+}
+
+.img {
+    width:33%;
+    height:50%;
+    margin-left: 1%;
+    margin-top: 1%;
+    float: left;
+    
+}
+
+.page_container .img1 {
+    background: url(../image/bg1.jpg) center/100% 100% no-repeat;
+}
+
+.page_container .img2 {
+    background: url(../image/bg2.jpg) center/100% 100% no-repeat;
+}
+.page_container .img3 {
+    background: url(../image/bg3.jpg) center/100% 100% no-repeat;
+}
+.page_container .img4 {
+    background: url(../image/bg4.jpg) center/100% 100% no-repeat;
+}
+
+.page>p {
+    font-size: 2em;
+    padding:1%;
+    height:100vh;
+    color:white;
+    font-style: italic;
+    word-break: break-all;
+    text-shadow: 5px 5px #97a6a655;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.upBtn {
+    background: url(../image/up_arrow_icon.png) center/100% 100% no-repeat;
+    position: fixed;
+    right:30px;
+    bottom:60vh;
+    width:50px;
+    height:50px;
+}
+
+.downBtn {
+    background: url(../image/down_arrow_icon.png) center/100% 100% no-repeat;
+    position: fixed;
+    right:30px;
+    bottom:40vh;
+    width:50px;
+    height:50px;
+}
