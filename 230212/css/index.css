@@ -1,0 +1,28 @@
+.scrollTop,
+.scrollTop:hover {
+    height:50px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    background-color: aqua;
+    color: coral;
+    line-height: 50px;
+    border-radius: 25%;
+    cursor: pointer;
+}
+
+.scrollTop {
+    display: none; 
+    width:50px;
+
+    opacity: .5;
+}
+
+.scrollTop:hover {
+    display: inline-block;
+    width: 80px;
+
+    opacity: 1;
+    transition: .5s;
+}
