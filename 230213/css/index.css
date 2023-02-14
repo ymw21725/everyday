@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing:border-box;
+    user-select: none;
+}
+
+body {
+    display: flex;
+    /* overflow: hidden; */
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height:100vh;
+    
+}
+
+.main_container{
+    width:400px;
+    height:500px;
+    position: relative;
+    /* flex-direction: column; */
+    /* display: flex; */
+    margin: 1vh 0;
+    /* overflow: hidden; */
+    
+}
+
+
+
+.main_container .slide_list {
+    display: flex;
+    justify-items: center;
+    width:100%;
+    height:90%;
+    /* overflow: hidden; */
+    position: absolute;
+    left:0;
+    overflow: visible;
+    transition: 2s;
+}
+
+.slide_list li {
+    width:100%;
+    height:100%;
+    left:100%;
+    /* position: absolute; */
+    transition: 2s;
+    /* overflow: hidden; */
+    
+}
+
+.slide_list img {
+    border-radius: 50px;
+    width:400px;
+    height:100%;
+    /* overflow: hidden; */
+}
+
+
+a>img {
+    width:50px;
+    height:50px;
+}
+
+.main_container>a {
+    position: absolute;
+    transform: translateY(-50%);
+    top : 50%;
+    /* overflow: visible; */
+}
+
+.main_container.btn_back,
+.main_container.btn_foward {
+    position: absolute;
+    top:50%;
+    /* overflow: visible; */
+}
+
+.btn_back {
+    right: 105%;
+}
+
+.btn_foward {
+    left: 105%;
+}
+
+a.nonVisible {
+    display: none;
+    /* visibility: hidden; */
+}
+
+p {
+    margin: 10px;
+}
+
+.pager a{
+    /* position: absolute; */
+    /* display: flex; */
+    display: inline-block;
+    /* text-align: center; */
+    /* margin: ; */
+    /* flex-direction: row; */
+    border-radius: 50%;
+    margin: 10px;
+    width:50px;
+    height:50px;
+    background-color: gray;
+    cursor: pointer;
+    /* justify-content: space-around; */
+}
+
+.pager {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    /* flex-direction:row; */
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+
+
+}
+
+
+.pager .black_change {
+    background-color: black;
+}
+
+
+/* .slide_list li {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    left: 100%;
+    opacity: 0;
+
+    transition: all .5s ease-in-out;
+} */
+
+
+.slide_list li .inImg {
+    left: 0;
+    opacity: 1;
+
+}
