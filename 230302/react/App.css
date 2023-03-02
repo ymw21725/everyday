@@ -1,0 +1,37 @@
+* {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputForm label,
+.inputForm textarea,
+.delSerialNum input {
+    display: block;
+}
+
+.listTable {
+    margin-bottom: 20px;
+}
+
+.listTable li {
+    border-bottom: 1px solid;
+    padding: 10px;
+
+    display: flex;
+}
+
+.listTable li div {
+    width: 100%;
+}
+
+.delSerialNum {
+    margin-top:20px;
+}
